@@ -1,0 +1,99 @@
+<div id="pagina">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Registrar Especialista</h2>
+        </div> 
+        
+        
+        <form action="" [formGroup]="formRegistrar" (ngSubmit)="registrar()">
+          
+        <div id="cuerpo">
+                <div class="form-group" >
+                  <label id="lblNombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" required
+                  placeholder="Ingresar nombre aqui"
+                  formControlName="nombre"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nombre.touched || submitted) && (formRegistrar.controls.nombre.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nombre.errors) && (formRegistrar.controls.nombre.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Apellido</label>
+                  <input type="text" class="form-control" id="" required
+                  placeholder="Ingresar apellido aqui"
+                  formControlName="apellido"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.apellido.touched || submitted) && (formRegistrar.controls.apellido.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.apellido.errors) && (formRegistrar.controls.apellido.touched)">Dato Obligatorio</span>
+                </div>
+
+                <div class="form-group" >
+                  <label for="">Especialidad</label>
+                  <select id="selectEspecialidad" required formControlName="especialidad"
+                  (change)="onSelected($event)">
+                    <option [value]="especialidad" *ngFor="let especialidad of especialidades">{{especialidad}}</option>
+                  </select>
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.especialidad.errors) && (formRegistrar.controls.especialidad.touched)">Dato Obligatorio</span>
+                </div>
+
+
+                <div class="form-group" >
+                  <label for="">Legajo</label>
+                  <input type="number" class="form-control" id="" required
+                  placeholder="Ingresar Legajo aqui"
+                  formControlName="nroLegajo"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nroLegajo.touched || submitted) && (formRegistrar.controls.nroLegajo.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nroLegajo.errors) && (formRegistrar.controls.nroLegajo.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Numero de Documento</label>
+                  <input type="number" class="form-control" id="" required
+                  placeholder="Ingresar numero de documento aqui"
+                  formControlName="nroDoc"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nroDoc.touched || submitted) && (formRegistrar.controls.nroDoc.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nroDoc.errors) && (formRegistrar.controls.nroDoc.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Telefono</label>
+                  <input type="number" class="form-control" id="" required
+                  placeholder="Ingresar telefono aqui"
+                  formControlName="nroTel"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nroTel.touched || submitted) && (formRegistrar.controls.nroTel.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nroTel.errors) && (formRegistrar.controls.nroTel.touched)">Dato Obligatorio</span>
+                </div>
+
+                <!-- DISPONIBILIDAD HORARIA -->
+                <div class="form-group" >
+                  <label for="">Disponibilidad Horaria</label>
+                  
+                  <mat-slider id="slider" step="1" min="08" max="23" showTickMarks discrete >
+                    <input #horaInicio value="09" matSliderStartThumb
+                    formControlName="horarioInicio">
+                    <input #horaFin value="16" matSliderEndThumb
+                    formControlName="horarioFin">
+                  </mat-slider>
+
+                  <div id="mostrarHorario">
+                  
+                    <label for="">Hora inicio</label>
+                    <input type="text" value="{{horaInicio.value}}" readonly>
+                  
+                    <label for="">Hora fin</label>
+                    <input type="text" value="{{horaFin.value}}" readonly>
+                  
+                  </div>
+
+                </div>
+                <!-- DISPONIBILIDAD HORARIA -->
+
+              </div>
+              <div id="pie">
+                <input type="submit" class="btn btn-success" value="Registrar">
+                <input type="button" (click)="volver()" class="btn btn-danger" value="Volver">
+              </div>
+              
+            </form>
+            </div>
+</div>
+

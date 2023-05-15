@@ -1,0 +1,145 @@
+<div id="pagina">
+    <div id="pagina__buscar" *ngIf="opcionActualABMC == 'L'">
+
+        <div id="contenedor-buscador">
+            <div id="cuadro-contenedor">
+                
+                <div class="form-group" id="buscador">
+                    <div id="cabecera-buscador">
+                        <label>Ingresar articulo:</label>
+                    </div>
+                    <div id="cuerpo-buscador">
+                        <input id="input-buscador" #buscador type="text" class="form-control" placeholder="Ingresar articulo">
+                    </div>
+                </div>
+                <div id="pie-contenedor">
+                    <input type="button" class="btn btn-success" (click)="buscarRegistro(buscador.value)" value="Buscar">
+                    <input type="button" class="btn btn-danger" (click)="agregar()" value="Agregar">
+                </div>
+            </div>
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    
+        <div id="contenedor-articulos">
+            <div class="table-responsive">
+                <div id="spinner-tabla" *ngIf="spinner" class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                <table *ngIf="articulos && articulos.length"
+                class=
+                "mt-2
+                table 
+                table-striped
+                table-hover	
+                table-borderless
+                table-primary
+                align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr *ngFor="let articulo of articulos"
+                            class="table-primary" >
+                                <td scope="row">{{articulo.nombre}}</td>
+                                <td>{{articulo.descripcion}}</td>
+                                <td>{{articulo.precio|currency}}</td>
+                                <td>
+                                    <i id="editar" class="fa-solid fa-pen-to-square" (click)="modificar(articulo)"></i>
+                                    <i id="borrar" class="fa-solid fa-trash" (click)="borrar(articulo)"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            
+                        </tfoot>
+                </table>
+            </div>
+        
+        </div>
+        <div id="piePagina">
+            <div id="contenedorPie">
+                <input id="btnLast"  type="button" class="btn btn-info" value="Anterior">
+                <input id="btnNext"  type="button" class="btn btn-primary" value="Siguiente">
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+<!-- AGREGAR -->
+    <div id="pagina__registrar" *ngIf="opcionActualABMC == 'A'">
+        <div id="contenedor-registrar" class="form-group">
+            <form [formGroup]="formRegistro" (ngSubmit)="registrar()">
+                <div id="cabecera-registrador">
+                    <h2>Registrar Articulo</h2>
+                    <div *ngIf="spinner" class="spinner-border text-primary float-right ml-3" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                </div>
+                <div id="cuerpo-registrador">
+                    <label for="">Nombre</label>
+                    <input type="text"  formControlName="nombre" class="form-control" id="" placeholder="Ingresar Nombre">
+
+                    <label for="">Descripcion</label>
+                    <input type="text" formControlName="descripcion" class="form-control" id="" placeholder="Ingresar Descripcion">
+
+                    <label for="">Precio</label>
+                    <input type="number" formControlName="precio" class="form-control" id="" placeholder="Ingresar Precio">
+                </div>
+                <div id="pie-registrador">
+                    <input name="" id="" class="btn btn-success form-control" type="submit" value="Registrar">
+                    <input name="" id="btn-volver" class="btn btn-success form-control" (click)="regresar()" type="button" value="Volver">
+                </div>
+            </form>    
+        </div>
+    </div>
+
+
+
+<!-- MODIFICAR -->
+    <div id="pagina__registrar" *ngIf="opcionActualABMC == 'M'">
+        <div id="contenedor-registrar" class="form-group">
+            <form [formGroup]="formModificar">
+                <!-- <form [formGroup]="formModificar" (ngSubmit)="update()"> -->
+                <div id="cabecera-registrador">
+                    <h2>Modificar Articulo</h2>
+                    <div *ngIf="spinner" class="spinner-border text-primary float-right ml-3" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                </div>
+                <div id="cuerpo-registrador">
+                    <label for="">Nombre</label>
+                    <input id="nombreUpdate" [(ngModel)]="nombre" type="text" formControlName="nombre" class="form-control" id="" placeholder="Ingresar Nombre">
+
+                    <label for="">Descripcion</label>
+                    <input id="descripcionUpdate" [(ngModel)]="descripcion" type="text"  formControlName="descripcion" class="form-control" id="" placeholder="Ingresar Descripcion">
+
+                    <label for="">Precio</label>
+                    <input id="precioUpdate" [(ngModel)]="precio" type="number" formControlName="precio" class="form-control" id="" placeholder="Ingresar Precio">
+                </div>
+                <div id="pie-registrador">
+                    <input name="" id="" class="btn btn-success form-control" (click)="update()" type="submit" value="Actualizar">
+                    <input name="" id="btn-volver" class="btn btn-success form-control" (click)="regresar()" type="button" value="Volver">
+                </div>
+            </form>    
+        </div>
+    </div>
+
+    
+    
+
+
+</div>

@@ -1,0 +1,47 @@
+#pagina{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 226, 220);
+}
+
+#contenedor{
+    background-color: aquamarine;
+    width: 60%;
+    height: 80%;
+    display: grid;
+    padding: 30px;
+    box-sizing: content-box;
+    justify-content: center;
+    border:solid black;
+    grid-template-columns: 33% 34% 33%;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: 50% 50%;
+    background-color: azure;
+    
+}
+
+.opcion{
+    border:solid black;
+    box-sizing:border-box;
+    user-select: none;
+    cursor: pointer;
+}
+.cuerpo:hover {
+    opacity: 0.8;
+}
+
+.cabecera{
+    background-color:aquamarine;
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpo{
+    background-color: burlywood;
+    height: 91%;
+    text-align: center;
+}

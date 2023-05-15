@@ -1,0 +1,63 @@
+<div id="pagina">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Registrar Paciente</h2>
+        </div> 
+        
+        
+        <form action="" [formGroup]="formRegistrar" (ngSubmit)="registrar()">
+          
+        <div id="cuerpo">
+                <div class="form-group" >
+                  <label id="lblNombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" required
+                  placeholder="Ingresar nombre aqui"
+                  formControlName="nombre"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nombre.touched || submitted) && (formRegistrar.controls.nombre.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nombre.errors) && (formRegistrar.controls.nombre.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Apellido</label>
+                  <input type="text" class="form-control" id="" required
+                  placeholder="Ingresar apellido aqui"
+                  formControlName="apellido"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.apellido.touched || submitted) && (formRegistrar.controls.apellido.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.apellido.errors) && (formRegistrar.controls.apellido.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Numero de Documento</label>
+                  <input type="number" class="form-control" id="" required
+                  placeholder="Ingresar numero de documento aqui"
+                  formControlName="nroDoc"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nroDoc.touched || submitted) && (formRegistrar.controls.nroDoc.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nroDoc.errors) && (formRegistrar.controls.nroDoc.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Email</label>
+                  <input type="email" class="form-control" id="" required
+                  placeholder="Ingresar email aqui"
+                  formControlName="email"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.email.touched || submitted) && (formRegistrar.controls.email.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.email.errors) && (formRegistrar.controls.email.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Telefono</label>
+                  <input type="number" class="form-control" id="" required
+                  placeholder="Ingresar telefono aqui"
+                  formControlName="tel"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.tel.touched || submitted) && (formRegistrar.controls.tel.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.tel.errors) && (formRegistrar.controls.tel.touched)">Dato Obligatorio</span>
+                </div>
+              </div>
+              <div id="pie">
+                <input type="submit" class="btn btn-success" value="Registrar">
+                <input type="button" class="btn btn-danger" (click)="volver()" value="Volver">
+              </div>
+              
+            </form>
+            </div>
+</div>

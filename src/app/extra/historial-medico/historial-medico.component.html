@@ -1,0 +1,169 @@
+<div id="pagina" *ngIf="seleccionoPaciente && seleccionoEspecialista">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>PACIENTE</h2>
+        </div> 
+
+        <!-- <form [formGroup]="" (ngSubmit)=""> -->
+        <form [formGroup]="formRegistrar" (ngSubmit)="registrar()">
+            <div id="hc1">
+                <label class="form-control">{{selectTarjetaEspecialista.nombre}} {{selectTarjetaEspecialista.apellido}}</label>
+                <!-- <input hidden type="text" class="form form-control" id="especialista" formControlName="especialista" placeholder="especialista"> -->
+                
+                <div class="inputSpan">
+                    <label class="form-control">{{fecha}}</label>
+                    <!-- <input type="date" class="form form-control" id="fecha" formControlName="fecha"> -->
+                </div>
+
+                <div class="inputSpan">
+                    <label class="form-control">{{hora}}</label>
+                    <!-- <input type="time" class="form form-control" id="hora" formControlName="hora"> -->
+                </div>
+            </div>
+
+            <h3>FICHA DE IDENTIFICACIÓN</h3>
+            <div id="hc2">
+                <div id="hc2-div1">
+                    <div id="hc2-div1-div1">
+                        <label class="form-control">{{selectTarjetaPaciente.nombre}} {{selectTarjetaPaciente.apellido}}</label>
+                        <!-- <input hidden type="text" class="form form-control" id="paciente" formControlName="paciente" placeholder="paciente"> -->
+                    </div>
+                    <div id="hc2-div1-div2">
+                        <div class="inputSpan">
+                            <select class="form form-control" id="grupoSanguineo" formControlName="grupoSanguineo">
+                                <option value="" disabled selected>Grupo sanguineo</option>
+                                <option value="0" selected>0</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                            </select>
+                            <span class="text-danger" *ngIf="(formRegistrar.controls.grupoSanguineo.errors) && (formRegistrar.controls.grupoSanguineo.touched)">Dato Obligatorio</span>
+                        </div>
+                    </div>
+                    
+                    <div id="hc2-div1-div3">
+                        <div class="inputSpan">
+                            <select class="form form-control" id="genero" formControlName="genero">
+                                <option value="" disabled selected>Genero</option>
+                                <option value="hombre">Hombre</option>
+                                <option value="mujer">Mujer</option>
+                            </select>
+                            <span class="text-danger" *ngIf="(formRegistrar.controls.genero.errors) && (formRegistrar.controls.genero.touched)">Dato Obligatorio</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="hc2-div2">
+                    <div id="hc2-div2-div1">
+                        <div class="inputSpan">
+                            <input type="text" class="form form-control" id="estadoCivil" formControlName="estadoCivil" placeholder="estado civil"
+                            [ngClass]="{'is-invalid':(formRegistrar.controls.estadoCivil.touched || submitted) && (formRegistrar.controls.estadoCivil.errors)}">
+                            <span class="text-danger" *ngIf="(formRegistrar.controls.estadoCivil.errors) && (formRegistrar.controls.estadoCivil.touched)">Dato Obligatorio</span>
+                        </div>
+                    </div>
+                    <div id="hc2-div2-div2">
+                        <div class="inputSpan">
+                            <input type="text" class="form form-control" id="ocupacion" formControlName="ocupacion" placeholder="ocupacion"
+                            [ngClass]="{'is-invalid':(formRegistrar.controls.ocupacion.touched || submitted) && (formRegistrar.controls.ocupacion.errors)}">
+                            <span class="text-danger" *ngIf="(formRegistrar.controls.ocupacion.errors) && (formRegistrar.controls.ocupacion.touched)">Dato Obligatorio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hc2-div3">
+                    <div class="inputSpan" id="h2c-div3-div1">
+                        <input type="text" class="form form-control" id="domicilio" formControlName="domicilio" placeholder="domicilio"
+                        [ngClass]="{'is-invalid':(formRegistrar.controls.domicilio.touched || submitted) && (formRegistrar.controls.domicilio.errors)}">
+                        <span class="text-danger" *ngIf="(formRegistrar.controls.domicilio.errors) && (formRegistrar.controls.domicilio.touched)">Dato Obligatorio</span>
+                    </div>
+                    <div class="inputSpan" id="h2c-div3-div2">
+                        <input type="text" class="form form-control" id="localidad" formControlName="localidad" placeholder="localidad"
+                        [ngClass]="{'is-invalid':(formRegistrar.controls.localidad.touched || submitted) && (formRegistrar.controls.localidad.errors)}">
+                        <span class="text-danger" *ngIf="(formRegistrar.controls.localidad.errors) && (formRegistrar.controls.localidad.touched)">Dato Obligatorio</span>
+                    </div>
+                    <div class="inputSpan" id="h2c-div3-div3">
+                        <input type="number" class="form form-control" id="codigoPostal" formControlName="codigoPostal" placeholder="codigo postal"
+                        [ngClass]="{'is-invalid':(formRegistrar.controls.codigoPostal.touched || submitted) && (formRegistrar.controls.codigoPostal.errors)}">
+                        <span class="text-danger" *ngIf="(formRegistrar.controls.codigoPostal.errors) && (formRegistrar.controls.codigoPostal.touched)">Dato Obligatorio</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <h3>ANTECEDENTES</h3>
+            <div id="hc3">
+                    <input type="text" class="form form-control" id="heredoFamiliares" formControlName="heredoFamiliares" placeholder="heredo familiares">
+                    <input type="text" class="form form-control" id="personales" formControlName="personales" placeholder="personales">
+                    <input type="text" class="form form-control" id="alergicos" formControlName="alergicos" placeholder="alergicos">
+                <div id="hc3-div1">
+                        <input type="text" class="form form-control" id="ginecoObstetricos" formControlName="ginecoObstetricos" placeholder="gineco-obstetricos">                      
+                        <input type="text" class="form form-control" id="quirurgicos" formControlName="quirurgicos" placeholder="quirurgicos">
+                </div>
+            </div>
+
+            <h3>MOTIVO DE CONSULTA</h3>
+            <div id="hc4">
+                <input type="text" class="form form-control" id="motivo" formControlName="motivo" placeholder="motivo">
+            </div>
+
+            <h3>EXAMEN MEDICO</h3>
+            <div id="hc5">
+                <div id="hc5-div1">
+                    <input type="text" class="form form-control" id="diagnostico" formControlName="diagnostico" placeholder="diagnostico">
+                    <input type="text" class="form form-control" id="examenFisico" formControlName="examenFisico" placeholder="examen fisico">
+                </div>
+                
+                <input type="text" class="form form-control" id="tratamiento" formControlName="tratamiento" placeholder="tratamiento">
+            </div>
+
+            <div id="pie">
+                <input type="submit" class="form-control btn btn-success" id="aceptar" value="Registrar">
+                <input type="button" class="form-control btn btn-danger" id="volver" value="Volver">
+              </div>
+              
+        </form>
+        
+        
+        
+    </div>
+</div>
+
+
+<div id="pagina1" *ngIf="seleccionoPaciente == false && seleccionoEspecialista == false">
+    <div id="contenedor1">
+        <div id="cabecera1">
+            <h2>Paciente</h2>
+        </div> 
+
+        <div id="grid1">
+            <div id="tarjetas" *ngFor="let tarjeta of tarjetasPacientes">
+                <div (click)="selectTarjeta1(tarjeta)" id="tarjetaPaciente">
+                    <p>{{tarjeta.nombre}}</p>
+                    <p>{{tarjeta.apellido}}</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<div id="pagina2" *ngIf="seleccionoPaciente && seleccionoEspecialista == false">
+    <div id="contenedor2">
+        <div id="cabecera2">
+            <h2>Especialista</h2>
+        </div> 
+     
+        <div id="grid2">
+            <div id="tarjetas" *ngFor="let tarjeta of tarjetasEspecialistas">
+                <div (click)="selectTarjeta2(tarjeta)" id="tarjetaEspecialista">
+                    <p>{{tarjeta.nombre}}</p>
+                    <p>{{tarjeta.apellido}}</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

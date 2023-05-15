@@ -1,0 +1,73 @@
+<div id="pagina">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Registrar Turno</h2>
+        </div> 
+
+        <div id="cuerpoSuperior">
+            <div class="espacioTarjeta" id="espacioTarjeta1" *ngIf="!seleccionoTarj1">
+                <h5>Ingresar Paciente</h5>
+            </div>
+            <div class="espacioTarjeta" id="selectEspacioTarjeta1" *ngIf="seleccionoTarj1">
+                {{tarjetaPaciente.nombre}} {{tarjetaPaciente.apellido}}
+            </div>
+            <div class="espacioTarjeta" id="espacioTarjeta2" *ngIf="!seleccionoTarj2">
+                <h5>Ingresar Especialista</h5>
+            </div>
+            <div class="espacioTarjeta" id="selectEspacioTarjeta2" *ngIf="seleccionoTarj2">
+                {{tarjetaEspecialista.nombre}} {{tarjetaEspecialista.apellido}}
+            </div>
+            <div class="espacioTarjeta" id="espacioTarjeta3" *ngIf="!seleccionoTarj3">
+                <h5>Ingresar Turno</h5>
+            </div>
+            <div class="espacioTarjeta" id="selectEspacioTarjeta3" *ngIf="seleccionoTarj3">
+                <h5>{{tarjetaHoraTurno.diaSemana}}</h5> {{tarjetaHora}}
+            </div>
+        </div>
+        
+
+
+        <!-- CUERPO INFERIOR -->
+        <div id="cuerpoInferior">
+
+
+
+            <!-- Paciente -->
+            <div id="paciente" *ngIf="seleccionoTarj1 == false">
+                <div (click)="selectTarjeta1(tarjeta)" class="tarjeta" *ngFor="let tarjeta of tarjetasPacientes" >
+                    <div class="cabeceraTarjeta"><p>{{tarjeta.nombre}} {{tarjeta.apellido}}</p></div>
+                    <div class="cuerpoTarjeta"></div>
+                </div>
+            </div>
+
+            <!-- Especialista -->
+            <div id="especialista" *ngIf="seleccionoTarj2 == false && seleccionoTarj1">
+                <div (click)="selectTarjeta2(tarjeta)" class="tarjeta" *ngFor="let tarjeta of tarjetasEspecialistas" >
+                    <div class="cabeceraTarjeta"><p>{{tarjeta.nombre}} {{tarjeta.apellido}}</p></div>
+                    <div class="cuerpoTarjeta"></div>
+                </div>
+            </div>
+
+            <!-- Hora Turno -->
+            <div id="horaTurno" *ngIf="seleccionoTarj3 == false && seleccionoTarj2">
+                <div (click)="selectTarjeta3(tarjeta)" class="tarjeta" *ngFor="let tarjeta of disponibilidadOrdenadaEspecialista; index as i" >
+                    <div class="cabeceraTarjeta">
+                        <h5>{{tarjeta.diaSemana}}</h5> <p>{{tarjeta.horario[0]}} : {{tarjeta.horario[1]}}</p></div>
+                    <div class="cuerpoTarjeta"></div>
+                </div>
+            </div>
+
+            <!-- Registrar -->
+            <div id="registrarTurno" *ngIf="seleccionoTarj3 == true">
+                <h5>¿Estas seguro de registrar el turno?</h5>
+                <input (click)="registrar()" id="aceptarRegistrar" type="button" value="Si" class="btn btn-primary">
+                <input (click)="volver()" id="volverRegistrar" type="button" value="No" class="btn btn-danger">    
+            </div>
+
+        </div>
+
+        <div id="pie">
+            <input type="button" (click)="volver()" class="btn btn-danger" value="Volver">
+        </div>
+
+</div>

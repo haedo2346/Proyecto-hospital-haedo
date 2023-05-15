@@ -1,0 +1,34 @@
+#pagina{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 226, 220);
+}
+
+#contenedor{
+    background-color: aquamarine;
+    width: 60%;
+    height: 80%;
+    padding: 30px;
+    box-sizing: content-box;
+    border:solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;  
+
+}
+
+#cabecera{
+    background-color: aquamarine;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tabla{
+    text-align: center;
+}

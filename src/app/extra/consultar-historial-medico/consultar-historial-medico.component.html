@@ -1,0 +1,144 @@
+<div id="pagina" *ngIf="seleccionoTarj1 == false">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>HISTORIAL MEDICO</h2>
+        </div> 
+        <div id="grid">
+            <div id="tarjetas" *ngFor="let tarjeta of tarjetasPacientes">
+                <div (click)="selectTarjeta1(tarjeta)" id="tarjetaPaciente">
+                    <p>{{tarjeta.nombre}}</p>
+                    <p>{{tarjeta.apellido}}</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+<div id="pagina1" *ngIf="seleccionoTarj1">
+    <div id="contenedor1">
+        <div id="cabecera1">
+            <h2>HISTORIAL MEDICO</h2>
+        </div> 
+
+            <div id="hc1">
+                <label class="form-control">{{HMSelect.especialista.nombre}} {{HMSelect.especialista.apellido}}</label>
+                <!-- <input hidden type="text" class="form form-control" id="especialista" formControlName="especialista" placeholder="especialista"> -->
+                
+                <div class="inputSpan">
+                    <label class="form-control">{{HMSelect.fecha}}</label>
+                    <!-- <input type="date" class="form form-control" id="fecha" formControlName="fecha"> -->
+                </div>
+
+                <div class="inputSpan">
+                    <label class="form-control">{{HMSelect.hora}}</label>
+                    <!-- <input type="time" class="form form-control" id="hora" formControlName="hora"> -->
+                </div>
+            </div>
+
+            <h3>FICHA DE IDENTIFICACIÓN</h3>
+            <div id="hc2">
+                <div id="hc2-div1">
+                    <div id="hc2-div1-div1">
+                        <label class="form-control">{{HMSelect.paciente.nombre}} {{HMSelect.paciente.apellido}}</label>
+                        <!-- <input hidden type="text" class="form form-control" id="paciente" formControlName="paciente" placeholder="paciente"> -->
+                    </div>
+                    <div id="hc2-div1-div2">
+                        <div class="inputSpan">
+                            <label class="form-control">{{HMSelect.grupoSanguineo}}</label>
+                        </div>
+                    </div>
+                    
+                    <div id="hc2-div1-div3">
+                        <div class="inputSpan">
+                            <label class="form-control">{{HMSelect.genero}}</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="hc2-div2">
+                    <div id="hc2-div2-div1">
+                        <div class="inputSpan">
+                            <label class="form-control">{{HMSelect.estadoCivil}}</label>
+                        </div>
+                    </div>
+                    <div id="hc2-div2-div2">
+                        <div class="inputSpan">
+                            <label class="form-control">{{HMSelect.ocupacion}}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hc2-div3">
+                    <div class="inputSpan" id="h2c-div3-div1">
+                        <label class="form-control">{{HMSelect.domicilio}}</label>
+                    </div>
+                    <div class="inputSpan" id="h2c-div3-div2">
+                        <label class="form-control">{{HMSelect.localidad}}</label>
+                    </div>
+                    <div class="inputSpan" id="h2c-div3-div3">
+                        <label class="form-control">{{HMSelect.codigoPostal}}</label>
+                    </div>
+                </div>
+                
+            </div>
+
+            <h3>ANTECEDENTES</h3>
+            <div id="hc3">
+                <div id="d1">
+                    <label>heredo Familiares</label>
+                    <label class="form-control">{{HMSelect.heredoFamiliares}}</label>
+                </div>
+                <div id="d2">
+                    <label>Personales</label>
+                    <label class="form-control">{{HMSelect.personales}}</label>
+                </div>
+                <div id="d3">
+                    <label>Alergicos</label>
+                    <label class="form-control">{{HMSelect.alergicos}}</label>
+                </div>
+                <div id="hc3-div1">
+                    <div id="d4">
+                        <label>Gineco-Obstetricos</label>
+                        <label class="form-control">{{HMSelect.ginecoObstetricos}}</label>
+                    </div>
+                    <div id="d5">
+                        <label>Quirurgicos</label>
+                        <label class="form-control">{{HMSelect.quirurgicos}}</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3>MOTIVO DE CONSULTA</h3>
+            <div id="hc4">
+                <div id="d6">
+                    <label>Motivo</label>
+                    <label class="form-control">{{HMSelect.motivo}}</label>
+                </div>
+            </div>
+
+            <h3>EXAMEN MEDICO</h3>
+            <div id="hc5">
+                <div id="hc5-div1">
+                    <div id="d7">
+                        <label>Diagnostico</label>
+                        <label class="form-control" placeholder="diagnostico">{{HMSelect.diagnostico}}</label>
+                    </div>
+                    <div id="d8">
+                        <label>Examen Fisico</label>
+                        <label class="form-control">{{HMSelect.examenFisico}}</label>
+                    </div>
+                </div>
+                <div id="d9">
+                    <label>Tratamiento</label>
+                    <label class="form-control">{{HMSelect.tratamiento}}</label>
+                </div>
+            </div>
+
+            <div id="pie">
+                <input type="button" class="form-control btn btn-danger" id="volver" value="Volver">
+              </div>     
+        
+        
+    </div>
+</div>

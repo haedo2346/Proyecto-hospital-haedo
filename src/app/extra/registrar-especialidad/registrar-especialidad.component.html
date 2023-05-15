@@ -1,0 +1,40 @@
+<div id="pagina">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Registrar Especialidad</h2>
+        </div> 
+        
+        
+        <form action="" [formGroup]="formRegistrar" (ngSubmit)="registrar()">
+          
+        <div id="cuerpo">
+                <div class="form-group" >
+                  <label id="lblNombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" required
+                  placeholder="Ingresar nombre aqui"
+                  formControlName="nombre"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.nombre.touched || submitted) && (formRegistrar.controls.nombre.errors)}">
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.nombre.errors) && (formRegistrar.controls.nombre.touched)">Dato Obligatorio</span>
+                </div>
+                
+                <div class="form-group" >
+                  <label for="">Descripcion</label>
+                  <textarea 
+                  id="" cols="20" rows="5" required
+                  class="form-control"
+                  placeholder="Ingresar descripcion aqui"
+                  formControlName="descripcion"
+                  [ngClass]="{'is-invalid':(formRegistrar.controls.descripcion.touched || submitted) && (formRegistrar.controls.descripcion.errors)}">
+                  </textarea>
+                  <span class="text-danger" *ngIf="(formRegistrar.controls.descripcion.errors) && (formRegistrar.controls.descripcion.touched)">Dato Obligatorio</span>
+                </div>
+
+              </div>
+              <div id="pie">
+                <input type="submit" class="btn btn-success" value="Registrar">
+                <input type="button" (click)="volver()" class="btn btn-danger" value="Volver">
+              </div>
+              
+            </form>
+            </div>
+</div>

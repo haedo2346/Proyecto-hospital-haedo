@@ -1,0 +1,40 @@
+<div id="fondo">
+    <div id="contenedor" >
+        <h2 class="mt-4 mb-4 text-center">Registrarse</h2>
+        <form [formGroup]="formRegistrar" (ngSubmit)="onSubmit()">    
+            <div id="formulario" class="form-group">
+                <div id="formulario-nombre">
+                    <label for="">Correo Electronico</label>
+                    <input formControlName="email" type="email" class="form-control" placeholder="Ingresar correo electronico"
+                    [ngClass]="{'is-invalid':(formRegistrar.controls.email.touched || submitted) && (formRegistrar.controls.email.errors)}">  
+                    <span class="text-danger" *ngIf="(formRegistrar.controls.email.errors) && (formRegistrar.controls.email.touched)">Dato obligatorio</span>  
+                </div>
+                <div id="formulario-contraseña">
+                    <label for="">Contraseña de Usuario</label>
+                    <input formControlName="password" type="password" class="form-control" name="" id="" placeholder="Ingresar contraseña"
+                    [ngClass]="{'is-invalid':(formRegistrar.controls.password.touched || submitted) && (formRegistrar.controls.password.errors)}">
+                    <span class="text-danger" *ngIf="(formRegistrar.controls.password.errors) && (formRegistrar.controls.password.touched)">Dato obligatorio</span>
+                    
+                </div>
+                <div id="formulario-ingresar">
+                    <input type="submit" id="btn-ingresar" value="REGISTRAR">  
+                </div>
+            </div>
+        </form>
+        <h3 id="infoAdicional" class="text-center mt-4">O puedes Registrarte tambien con:</h3>
+        <div class="icons">
+            
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <h3 id="infoAdicional" class="text-center mt-4">O tambien con:</h3>
+        <div class="icons">
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-google"></i>
+        </div>
+        <a [routerLink]="['/login']"><h3 id="infoAdicional2" class="text-center mt-4">Ya tengo una cuenta</h3></a>
+    </div>
+</div>
+
