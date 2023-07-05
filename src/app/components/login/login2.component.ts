@@ -18,7 +18,7 @@ export class Login2Component implements OnInit{
   private toastr: ToastrService){}
 
   formLogin: FormGroup;
-
+//
   ngOnInit(): void{
     this.formLogin = this.formBuilder.group({
       email: [null,[Validators.required, Validators.minLength(1)]], 

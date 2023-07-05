@@ -1,58 +1,51 @@
-
-
-#fondo{
-    background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+#fondo {
+  background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#pie{
+#pie {
   background-color: red;
 }
 
-#pie input{
+#pie input {
   width: 100%;
 }
 
-#contenedorcito2{
+#contenedorcito2 {
   width: 15vh;
   position: relative;
   top: -35vh;
-  
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(216, 113, 113); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  }
+  width: 20px;
+}
 
-  input::-webkit-outer-spin-button,
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(216, 113, 113);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-
-
-
-
-#pagina1{
+#pagina1 {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -60,23 +53,21 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
-#contenedor1{
-  
+#contenedor1 {
   width: 80%;
   max-width: 70%;
   height: 70%;
   padding: 30px;
   box-sizing: content-box;
-  border:solid black;
+  border: solid black;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  background-color: azure;  
+  background-color: azure;
   flex-wrap: wrap;
   overflow-x: hidden;
 }
 
-
-.tituloAgenda1{
+.tituloAgenda1 {
   background-color: beige;
   border: black solid;
   height: 10vh;
@@ -85,43 +76,39 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
-#dias{
+#dias {
   display: inline-flex;
 }
 
-#horarios{
+#horarios {
   display: flex;
   flex-direction: column;
   width: 100vh;
 }
 
-.titulo{
+.titulo {
   width: 100%;
 }
 
-#divGrid1{
-  
+#divGrid1 {
   display: grid;
   grid-template-rows: repeat(2, auto);
 }
 
-#divGrid2{
+#divGrid2 {
   display: inline-flex;
 }
-#divGrid22{
+#divGrid22 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-
-
-#horario{
+#horario {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(29, 8vh);
-
-}  
-.diaSemana1{
+}
+.diaSemana1 {
   background-color: rgb(179, 245, 245);
   border: black solid;
   display: flex;
@@ -129,17 +116,15 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
+#grid {
+  display: grid;
+  grid-template-rows: repeat(29, 8vh);
 
-
-#grid{
-  display: grid;  
-  grid-template-rows: repeat(29,8vh); 
-  
   border: solid black;
   flex-wrap: wrap;
 }
 
-.hora1{
+.hora1 {
   background-color: beige;
   border: black solid;
   display: flex;
@@ -147,7 +132,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
-#celdas{
+#celdas {
   width: 100%;
   height: 8vh;
   display: flex;
@@ -157,14 +142,14 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.agenda1{
+.agenda1 {
   width: 18vh;
-  height: 8vh; 
+  height: 8vh;
 }
 
-  /* --------------------- */
-  
-#pagina2{
+/* --------------------- */
+
+#pagina2 {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -173,28 +158,26 @@ input::-webkit-inner-spin-button {
   background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
-#contenedor2{
+#contenedor2 {
   width: 60%;
   max-width: 60%;
   height: 80vh;
   padding: 30px;
   box-sizing: content-box;
-  border:solid black;
+  border: solid black;
   background-color: rgb(255, 255, 255);
   overflow-x: scroll;
 }
 
-#grilla2{
+#grilla2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
-
 }
 
-#tarjeta_grilla{
+#tarjeta_grilla {
   background-color: rgb(224, 232, 78);
   font-weight: bold;
   background-repeat: no-repeat;
@@ -204,11 +187,10 @@ input::-webkit-inner-spin-button {
   width: fit-content;
   height: fit-content;
   border: solid black;
-
 }
 
 /*----------------------------*/
-#tarjetaCobro{
+#tarjetaCobro {
   width: auto;
   height: 100%;
   display: flex;
@@ -216,57 +198,51 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
-#div_padding1{
+#div_padding1 {
   display: flex;
   padding: 5vh;
   gap: 3vh;
 }
 
-#tarjetaCobro_FormaPago{
+#tarjetaCobro_FormaPago {
   border: solid black;
 }
-#tarjetaCobro_FormaPago h2{
+#tarjetaCobro_FormaPago h2 {
   text-align: center;
 }
 
-#tarjetaCobro_MontoPagar{
+#tarjetaCobro_MontoPagar {
   border: solid black;
   padding: 10vh;
   text-align: center;
 }
 
-#divMonto{
+#divMonto {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5vh;
 }
 
-
-
-
-#contenedor1{
+#contenedor1 {
   background-color: rgb(251, 233, 233);
 }
-.tituloAgenda1{
+.tituloAgenda1 {
   background-color: rgb(247, 123, 93);
 }
 
-.agenda1{
-  font-family:Arial, Helvetica, sans-serif;
-  
+.agenda1 {
+  font-family: Arial, Helvetica, sans-serif;
 }
-.diaSemana1{
+.diaSemana1 {
   font-weight: bold;
 }
 
-.turno{
+.turno {
   background-color: rgb(255, 246, 234);
 }
 
-
-
-#celdaTurno{
+#celdaTurno {
   background-color: rgb(89, 132, 177);
   display: flex;
   justify-content: center;
@@ -276,37 +252,36 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
-#volver{
+#volver {
   background-color: rgb(250, 34, 34);
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  
 }
 
-#volverTurnos{
+#volverTurnos {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.monto{
+.monto {
   cursor: pointer;
 }
 
-#cabeceraDeTurno{
+#cabeceraDeTurno {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
 }
 
-#cabeceraDeTurno span{
+#cabeceraDeTurno span {
   cursor: pointer;
 }
 
-#mensajeBorrar{
+#mensajeBorrar {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -317,12 +292,12 @@ input::-webkit-inner-spin-button {
   position: absolute;
 }
 
-#botBorrar{
+#botBorrar {
   display: flex;
   gap: 20px;
 }
 
-#divSelector1{
+#divSelector1 {
   border: solid black;
   border-radius: 20px;
   display: flex;
@@ -333,11 +308,11 @@ input::-webkit-inner-spin-button {
   margin-bottom: 2px;
 }
 
-#divSelector1 i{
+#divSelector1 i {
   cursor: pointer;
 }
 
-.horarioNro{
+.horarioNro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,7 +320,7 @@ input::-webkit-inner-spin-button {
   border: solid black;
 }
 
-.nroSemana{
+.nroSemana {
   display: flex;
   align-items: center;
   justify-content: center;
