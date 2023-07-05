@@ -28,7 +28,11 @@ import { HistorialMedicoComponent } from './extra/historial-medico/historial-med
 import { ConsultarHistorialMedicoComponent } from './extra/consultar-historial-medico/consultar-historial-medico.component';
 import { CobroComponent } from './extra/cobro/cobro.component';
 import { EstadisticaComponent } from './extra/estadistica/estadistica.component';
-import {MatDividerModule} from '@angular/material/divider'
+import {MatDividerModule} from '@angular/material/divider';
+import { NgChartsModule,  NgChartsConfiguration} from 'ng2-charts';
+import { ConsultarEspecialidadesComponent } from './extra/consultar-especialidades/consultar-especialidades.component';
+import { ConsultarEspecialistasComponent } from './extra/consultar-especialistas/consultar-especialistas.component';
+
 
 
 @NgModule({
@@ -49,7 +53,9 @@ import {MatDividerModule} from '@angular/material/divider'
     HistorialMedicoComponent,
     ConsultarHistorialMedicoComponent,
     CobroComponent,
-    EstadisticaComponent
+    EstadisticaComponent,
+    ConsultarEspecialidadesComponent,
+    ConsultarEspecialistasComponent
   ],
   imports: [
     BrowserModule,
@@ -61,16 +67,23 @@ import {MatDividerModule} from '@angular/material/divider'
       {path: "login", component: Login2Component},
 
       {path: "menuPrincipal", component: MenuPrincipalComponent},
-      {path: "registrarCliente", component: RegistrarClienteComponent},
-      {path: "registrarEspecialista", component: RegistrarEspecialistaComponent},
-      {path: "registrarEspecialidad", component: RegistrarEspecialidadComponent},
-      {path: "turnos", component: TurnosComponent},
       {path: "agenda", component: AgendaComponent},
+      {path: "cobro", component: CobroComponent},
+      {path: "registrarHM", component: HistorialMedicoComponent},
+      {path: "consultarHM", component: ConsultarHistorialMedicoComponent},
+      {path: "registrarCliente", component: RegistrarClienteComponent},
+      {path: "registrarEspecialidad", component: RegistrarEspecialidadComponent},
+      {path: "registrarEspecialista", component: RegistrarEspecialistaComponent},
+      {path: "turnos", component: TurnosComponent},
+      {path: "estadistica", component: EstadisticaComponent},
+      {path: "consultarEspecialidades", component: ConsultarEspecialidadesComponent},
+      {path: "consultarEspecialistas", component: ConsultarEspecialistasComponent},
+      
 
       {path: "articulos", component: ArticulosComponent},
       {path: "editarArticulos/:id", component: ArticulosComponent},
-
-      {path: "", redirectTo:"inicio", pathMatch:"full"}
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      
     ]),
     CommonModule,
     BrowserAnimationsModule,
@@ -82,8 +95,9 @@ import {MatDividerModule} from '@angular/material/divider'
     FormsModule,
     MatSliderModule,
     MatDividerModule,
+    NgChartsModule,
   ],
-  providers: [],
+  providers: [{ provide: NgChartsConfiguration, useValue: { generateColors: true }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

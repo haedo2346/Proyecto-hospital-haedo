@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(223, 226, 220);
+    background-image: url(https://wallpaperaccess.com/full/1758836.jpg);
 }
 
 #contenedor{
-    background-color: aquamarine;
+    background-color: rgb(182, 228, 213);
     width: 60%;
     height: 80%;
     padding: 30px;
@@ -22,7 +22,7 @@
 }
 
 #cabecera{
-    background-color: aquamarine;
+    background-color: rgb(182, 228, 213);
     width: 100%;
     height: 15%;
     display: flex;
@@ -31,7 +31,7 @@
 }
 
 #cabecera1{
-    background-color: aquamarine;
+    background-color: rgb(182, 228, 213);
     width: 100%;
     height: 15%;
     display: flex;
@@ -52,7 +52,7 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    background-color: rgb(166, 108, 220);
+    background-color: rgb(238, 219, 255);
     border: solid black;
     width: 20vh;
     height: 33vh;

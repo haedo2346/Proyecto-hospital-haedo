@@ -1,139 +1,287 @@
-<div id="pagina1" *ngIf="visTurno == false">
-    <div id="contenedor1">
-        <div id="contenedorcito">
-            <div id="pie">    
-                <input type="button" class="btn btn-danger" (click)="volver()" value="Volver">
-            </div>
-    
-            <div id="divGrid1">
-                <div id="dias">
-                    <div class="tituloAgenda1 agenda1">AGENDA</div>
-                    <div class="agenda1 diaSemana1">Lunes</div>
-                    <div class="agenda1 diaSemana1">Martes</div>
-                    <div class="agenda1 diaSemana1">Miercoles</div>
-                    <div class="agenda1 diaSemana1">Jueves</div>
-                    <div class="agenda1 diaSemana1">Viernes</div>
-                    <div class="agenda1 diaSemana1">Sabado</div>
-                    <div class="agenda1 diaSemana1">Domingo</div>
+<div id="fondo">
+    <!-- 
+    <div id="prueba 1 - eliminar div" *ngIf="1>0">
+
+    <div id="pagina1" *ngIf="visTurno == false">
+        <div id="contenedor1">
+            <div id="contenedorcito">
+                <div id="divSelector">
+                    <div id="contenedorcito_div1">
+                        <div><h2>Hoy es: {{diaActual}}/{{(mesActual.length == 1) ? "0" + mesActual:mesActual}} | ({{diaDeSemanaActual}}) | ({{nombreMes}})</h2></div>
+                    </div>
+                    <div id="divSelector1">
+                        <i class="fa-solid fa-angles-left"></i>
+                        Semana: {{estaSemana}}
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
                 </div>
-            </div>
-    
-            <div id="divGrid2">
-                <div id="horario">
-                    <div class="agenda1 hora1 08:00 - 08:30">08:00 - 08:30</div>
-                    <div class="agenda1 hora1 08:30 - 09:00">08:30 - 09:00</div>
-                    <div class="agenda1 hora1 09:00 - 09:30">09:00 - 09:30</div>
-                    <div class="agenda1 hora1 09:30 - 10:00">09:30 - 10:00</div>
-                    <div class="agenda1 hora1 10:00 - 10:30">10:00 - 10:30</div>
-                    <div class="agenda1 hora1 10:30 - 11:00">10:30 - 11:00</div>
-                    <div class="agenda1 hora1 11:00 - 11:30">11:00 - 11:30</div>
-                    <div class="agenda1 hora1 11:30 - 12:00">11:30 - 12:00</div>
-                    <div class="agenda1 hora1 12:00 - 12:30">12:00 - 12:30</div>
-                    <div class="agenda1 hora1 12:30 - 13:00">12:30 - 13:00</div>
-                    <div class="agenda1 hora1 13:00 - 13:30">13:00 - 13:30</div>
-                    <div class="agenda1 hora1 13:30 - 14:00">13:30 - 14:00</div>
-                    <div class="agenda1 hora1 14:00 - 14:30">14:00 - 14:30</div>
-                    <div class="agenda1 hora1 14:30 - 15:00">14:30 - 15:00</div>
-                    <div class="agenda1 hora1 15:00 - 15:30">15:00 - 15:30</div>
-                    <div class="agenda1 hora1 15:30 - 16:00">15:30 - 16:00</div>
-                    <div class="agenda1 hora1 16:00 - 16:30">16:00 - 16:30</div>
-                    <div class="agenda1 hora1 16:30 - 17:00">16:30 - 17:00</div>
-                    <div class="agenda1 hora1 17:00 - 17:30">17:00 - 17:30</div>
-                    <div class="agenda1 hora1 17:30 - 18:00">17:30 - 18:00</div>
-                    <div class="agenda1 hora1 18:00 - 18:30">18:00 - 18:30</div>
-                    <div class="agenda1 hora1 18:30 - 19:00">18:30 - 19:00</div>
-                    <div class="agenda1 hora1 19:00 - 19:30">19:00 - 19:30</div>
-                    <div class="agenda1 hora1 19:30 - 20:00">19:30 - 20:00</div>
-                    <div class="agenda1 hora1 20:00 - 20:30">20:00 - 20:30</div>
-                    <div class="agenda1 hora1 20:30 - 21:00">20:30 - 21:00</div>
-                    <div class="agenda1 hora1 21:00 - 21:30">21:00 - 21:30</div>
-                    <div class="agenda1 hora1 21:30 - 22:00">21:30 - 22:00</div>
-                    <div class="agenda1 hora1 22:00 - 22:30">22:00 - 22:30</div>
-                    <div class="agenda1 hora1 22:30 - 23:00">22:30 - 23:00</div>
-    
-                </div>
-                <div id="divGrid22">
-                    <div  *ngFor="let i of todasCeldasPosibles, index as x">
-                        <div id="grid2" *ngFor="let j of todasCeldasPosibles[x], index as y">
-                            <div id="grid" class="agenda1 turno" >
-                                <div (click)="visualizarTurnos(x, y)" id="celdas" *ngIf="todasCeldasPosibles[x][y] > 0">
-                                    <div>
-                                        {{ todasCeldasPosibles[x][y] }} turno{{todasCeldasPosibles[x][y] > 1 ? "s":""}}
-                                    </div>
-                                </div>
-                                
-                            </div>
+                <div id="contenedorcito_div2">
+                    <div id="divGrid1">
+                        <div id="dias">
+                            <div class="tituloAgenda1 agenda1">AGENDA</div>
+                            <div class="agenda1 diaSemana1">Lunes</div>
+                            <div class="agenda1 diaSemana1">Martes</div>
+                            <div class="agenda1 diaSemana1">Miercoles</div>
+                            <div class="agenda1 diaSemana1">Jueves</div>
+                            <div class="agenda1 diaSemana1">Viernes</div>
+                            <div class="agenda1 diaSemana1">Sabado</div>
+                            <div class="agenda1 diaSemana1">Domingo</div>
                         </div>
                     </div>
+            
+                    <div id="divGrid2">
+                        <div id="horario">
+                            <div class="agenda1 hora1 08:00 - 08:30">08:00 - 08:30</div>
+                            <div class="agenda1 hora1 08:30 - 09:00">08:30 - 09:00</div>
+                            <div class="agenda1 hora1 09:00 - 09:30">09:00 - 09:30</div>
+                            <div class="agenda1 hora1 09:30 - 10:00">09:30 - 10:00</div>
+                            <div class="agenda1 hora1 10:00 - 10:30">10:00 - 10:30</div>
+                            <div class="agenda1 hora1 10:30 - 11:00">10:30 - 11:00</div>
+                            <div class="agenda1 hora1 11:00 - 11:30">11:00 - 11:30</div>
+                            <div class="agenda1 hora1 11:30 - 12:00">11:30 - 12:00</div>
+                            <div class="agenda1 hora1 12:00 - 12:30">12:00 - 12:30</div>
+                            <div class="agenda1 hora1 12:30 - 13:00">12:30 - 13:00</div>
+                            <div class="agenda1 hora1 13:00 - 13:30">13:00 - 13:30</div>
+                            <div class="agenda1 hora1 13:30 - 14:00">13:30 - 14:00</div>
+                            <div class="agenda1 hora1 14:00 - 14:30">14:00 - 14:30</div>
+                            <div class="agenda1 hora1 14:30 - 15:00">14:30 - 15:00</div>
+                            <div class="agenda1 hora1 15:00 - 15:30">15:00 - 15:30</div>
+                            <div class="agenda1 hora1 15:30 - 16:00">15:30 - 16:00</div>
+                            <div class="agenda1 hora1 16:00 - 16:30">16:00 - 16:30</div>
+                            <div class="agenda1 hora1 16:30 - 17:00">16:30 - 17:00</div>
+                            <div class="agenda1 hora1 17:00 - 17:30">17:00 - 17:30</div>
+                            <div class="agenda1 hora1 17:30 - 18:00">17:30 - 18:00</div>
+                            <div class="agenda1 hora1 18:00 - 18:30">18:00 - 18:30</div>
+                            <div class="agenda1 hora1 18:30 - 19:00">18:30 - 19:00</div>
+                            <div class="agenda1 hora1 19:00 - 19:30">19:00 - 19:30</div>
+                            <div class="agenda1 hora1 19:30 - 20:00">19:30 - 20:00</div>
+                            <div class="agenda1 hora1 20:00 - 20:30">20:00 - 20:30</div>
+                            <div class="agenda1 hora1 20:30 - 21:00">20:30 - 21:00</div>
+                            <div class="agenda1 hora1 21:00 - 21:30">21:00 - 21:30</div>
+                            <div class="agenda1 hora1 21:30 - 22:00">21:30 - 22:00</div>
+                            <div class="agenda1 hora1 22:00 - 22:30">22:00 - 22:30</div>
+                            <div class="agenda1 hora1 22:30 - 23:00">22:30 - 23:00</div>
+            
+                        </div>
+                        <div id="divGrid22">
+                            <div  *ngFor="let i of todasCeldasPosibles, index as x">
+                                <div id="grid2" *ngFor="let j of todasCeldasPosibles[x], index as y">
+                                    <div id="grid" class="agenda1 turno" >
+                                        <div (click)="visualizarTurnos(x, y)" id="celdas" *ngIf="todasCeldasPosibles[x][y] > 0">
+                                            <div id="celdaTurno">
+                                                {{ todasCeldasPosibles[x][y] }} turno{{todasCeldasPosibles[x][y] > 1 ? "s":""}}
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+        
                 </div>
     
             </div>
-        </div>
-        
-
-
-
-        
-
+          
+            </div>
+            <div id="contenedorcito2">
+                    <input type="button" id="volver" class="btn btn-danger" (click)="volver()" value="Volver a menu principal">
+            </div>
     </div>
     
-</div>
-    
-    
-    
-    
-<div id="pagina2" *ngIf="visTurno">
-    <div id="contenedor2">
-        <div id="visTurno_titulo">
-            <h3>Visualizar Turnos</h3>
-        </div>  
 
-        <div id="grilla2" *ngIf="seleccionoTarjetaTurno == false">
-            <div id="visTurno_grilla" *ngFor="let i of turnosAVisualizar, index as x">
-                <div id="tarjeta_grilla" (click)="seleccionoTurno(i)">
-                    <p>
-                        Dia: {{i.diaSemana}}
-                    </p>
-                    <p>
-                        Turno: {{ i.horario[0] }} - {{ i.horario[1] }}
-                    </p>
-                    <p>
-                        Especialista: {{i.especialista.nombre}} {{i.especialista.apellido}}
-                    </p>
-                    
-                    <p>
-                        Paciente: {{i.paciente.nombre}} {{i.paciente.apellido}}
-                    </p>
-                </div>
 
-            </div>
-        </div>
 
-        <div id="tarjetaCobro" *ngIf="seleccionoTarjetaTurno">
-            <div id="tarjetaCobro_FormaPago" *ngIf="seleccionoFP == false">
-                <h2>FormaPago</h2>
-                <div id="div_padding1">
-                    <div (click)="seleccionoFormaPago('efectivo')" id="efectivo"><h4>Efectivo</h4></div>
-                    <div (click)="seleccionoFormaPago('credito')" id="credito"><h4>Credito</h4></div>
-                    <div (click)="seleccionoFormaPago('debito')" id="debito"><h4>Debito</h4></div>
-                </div>
-            </div>
-            <div id="tarjetaCobro_MontoPagar" *ngIf="seleccionoFP">
-                <h2>Monto a pagar</h2>
-                <div id="monto">
-                    <h4>Monto:</h4>
-                    <input type="number" #monto>
-                    <div id="divMonto">
-                        <button id="submitMonto" class="btn btn-success" type="submit" (click)="seleccionoMonto(monto.value)">Ingresar</button>
+
+    
+    
+    </div>
+     -->
+    
+    
+    
+
+    <div id="pagina1" *ngIf="visTurno == false">
+        <div id="contenedor1">
+            <div id="contenedorcito">
+                <div id="divSelector">
+                    <div id="contenedorcito_div1">
+                        <div><h2>Hoy es: {{esteDia}}/{{(esteNroMes.length == 1) ? "0" + esteNroMes:esteNroMes}} | ({{diaDeSemanaActual}}) | ({{nombreMes}})  |  Nro semana{{esteNroSemana}}</h2></div>
+                    </div>
+                    <div id="divSelector1">
+                        <i (click)="anteriorSemana()" class="fa-solid fa-angles-left"></i>
+                        Semana: {{estaSemana}}
+                        <i (click)="siguienteSemana()" class="fa-solid fa-angles-right"></i>
                     </div>
                 </div>
-                
-                
-            </div>
-        </div>
+                <div id="contenedorcito_div2">
+                    <div id="divGrid1">
+                        <div id="dias">
+                            <div class="tituloAgenda1 agenda1">AGENDA</div>
+                            <div class="agenda1 diaSemana1">Lunes</div>
+                            <div class="agenda1 diaSemana1">Martes</div>
+                            <div class="agenda1 diaSemana1">Miercoles</div>
+                            <div class="agenda1 diaSemana1">Jueves</div>
+                            <div class="agenda1 diaSemana1">Viernes</div>
+                            <div class="agenda1 diaSemana1">Sabado</div>
+                            <div class="agenda1 diaSemana1">Domingo</div>
+                        </div>
+                    </div>
+            
+                    <div id="divGrid2">
+                        <div id="horario">
+                            <div class="agenda1 horarioNro">HORARIO / N°</div>
+                            <div class="agenda1 hora1 08:00 - 08:30">08:00 - 08:30</div>
+                            <div class="agenda1 hora1 08:30 - 09:00">08:30 - 09:00</div>
+                            <div class="agenda1 hora1 09:00 - 09:30">09:00 - 09:30</div>
+                            <div class="agenda1 hora1 09:30 - 10:00">09:30 - 10:00</div>
+                            <div class="agenda1 hora1 10:00 - 10:30">10:00 - 10:30</div>
+                            <div class="agenda1 hora1 10:30 - 11:00">10:30 - 11:00</div>
+                            <div class="agenda1 hora1 11:00 - 11:30">11:00 - 11:30</div>
+                            <div class="agenda1 hora1 11:30 - 12:00">11:30 - 12:00</div>
+                            <div class="agenda1 hora1 12:00 - 12:30">12:00 - 12:30</div>
+                            <div class="agenda1 hora1 12:30 - 13:00">12:30 - 13:00</div>
+                            <div class="agenda1 hora1 13:00 - 13:30">13:00 - 13:30</div>
+                            <div class="agenda1 hora1 13:30 - 14:00">13:30 - 14:00</div>
+                            <div class="agenda1 hora1 14:00 - 14:30">14:00 - 14:30</div>
+                            <div class="agenda1 hora1 14:30 - 15:00">14:30 - 15:00</div>
+                            <div class="agenda1 hora1 15:00 - 15:30">15:00 - 15:30</div>
+                            <div class="agenda1 hora1 15:30 - 16:00">15:30 - 16:00</div>
+                            <div class="agenda1 hora1 16:00 - 16:30">16:00 - 16:30</div>
+                            <div class="agenda1 hora1 16:30 - 17:00">16:30 - 17:00</div>
+                            <div class="agenda1 hora1 17:00 - 17:30">17:00 - 17:30</div>
+                            <div class="agenda1 hora1 17:30 - 18:00">17:30 - 18:00</div>
+                            <div class="agenda1 hora1 18:00 - 18:30">18:00 - 18:30</div>
+                            <div class="agenda1 hora1 18:30 - 19:00">18:30 - 19:00</div>
+                            <div class="agenda1 hora1 19:00 - 19:30">19:00 - 19:30</div>
+                            <div class="agenda1 hora1 19:30 - 20:00">19:30 - 20:00</div>
+                            <div class="agenda1 hora1 20:00 - 20:30">20:00 - 20:30</div>
+                            <div class="agenda1 hora1 20:30 - 21:00">20:30 - 21:00</div>
+                            <div class="agenda1 hora1 21:00 - 21:30">21:00 - 21:30</div>
+                            <div class="agenda1 hora1 21:30 - 22:00">21:30 - 22:00</div>
+                            <div class="agenda1 hora1 22:00 - 22:30">22:00 - 22:30</div>
+                            <div class="agenda1 hora1 22:30 - 23:00">22:30 - 23:00</div>
+            
+                        </div>
+                        <div id="divGrid22">
+                            <div class="agenda1" *ngFor="let item of mostrarSemana, index as s">   
+                                <div id="grid" class="agenda1 nroSemana" >
+                                    {{item.dia}}    
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div  *ngFor="let i of mostrarGrillaSemActual, index as x">
+                                <div id="grid2" *ngFor="let j of mostrarGrillaSemActual[x], index as y">
+                                    <div id="grid" class="agenda1 turno" >
+                                        <div id="celdas" (click)="visualizarTurnos(x,y)" *ngIf="mostrarGrillaSemActual[x][y] > 0">
+                                            <div id="celdaTurno">
+                                                {{ mostrarGrillaSemActual[x][y] }} turno{{mostrarGrillaSemActual[x][y] > 1 ? "s":""}}
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+            
+                    </div>
         
-        <div id="pie2">    
-            <input type="button" class="btn btn-danger" (click)="atras()" value="Atras">
+                </div>
+    
+            </div>
+          
+            </div>
+            <div id="contenedorcito2">
+                    <input type="button" id="volver" class="btn btn-danger" (click)="volver()" value="Volver a menu principal">
+            </div>
+    </div>
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    <div id="pagina2" *ngIf="visTurno">
+        <div id="contenedor2">
+            <div id="visTurno_titulo">
+                <h3 *ngIf="">Visualizar Turnos</h3>
+            </div>  
+            <div *ngIf="msjBorrar == true" id="mensajeBorrar">
+                <h2>¿Esta Seguro de eliminar este turno?</h2>
+                <div id="botBorrar">
+                    <input type="button" class="btn btn-danger" value="Cancelar" (click)="atras()">
+                    <input type="button" class="btn btn-success" value="Aceptar" (click)="delete()">
+                </div>
+            </div>
+            <div id="grilla2" *ngIf="seleccionoTarjetaTurno == false">
+                <div id="visTurno_grilla" *ngFor="let i of turnosAVisualizar, index as x">
+                    <div id="tarjeta_grilla" >
+                        <div id="cabeceraDeTurno">
+                            <span (click)="seleccionoTurno(i)"><i id="cobrar" class="fa-solid fa-sack-dollar"></i></span>
+                            <span (click)="borrar(i)"><i id="borrar" class="fa-solid fa-trash"></i></span>
+                        </div>
+                        <p>
+                            Dia: {{i.diaSemana}}
+                        </p>
+                        <p>
+                            Turno: {{ i.horario[0] }} - {{ i.horario[1] }}
+                        </p>
+                        <p>
+                            Especialista: {{i.especialista.nombre}} {{i.especialista.apellido}}
+                        </p>
+                        
+                        <p>
+                            Paciente: {{i.paciente.nombre}} {{i.paciente.apellido}}
+                        </p>
+                        
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div id="tarjetaCobro" *ngIf="seleccionoTarjetaTurno">
+                <div id="tarjetaCobro_FormaPago" *ngIf="seleccionoFP == false">
+                    <h2 *ngIf="seleccionoFP == false">Forma de Pago</h2>
+                    <div id="div_padding1">
+                        <div (click)="seleccionoFormaPago('efectivo')" class="monto" id="efectivo"><h4>Efectivo</h4></div>
+                        <div (click)="seleccionoFormaPago('credito')" class="monto" id="credito"><h4>Credito</h4></div>
+                        <div (click)="seleccionoFormaPago('debito')" class="monto" id="debito"><h4>Debito</h4></div>
+                    </div>
+                    <div><input type="button" id="volverTurnos" class="btn btn-danger" value="Volver a Turnos" (click)="seleccionoTarjetaTurno = false"></div>
+                </div>
+                <div id="tarjetaCobro_MontoPagar" *ngIf="seleccionoFP">
+                    <h2>Monto a pagar</h2>
+                    <div id="monto">
+                        <h4>Monto:</h4>
+                        <input type="number" #monto>
+                        <div id="divMonto">
+                            <button id="submitMonto" class="btn btn-success" type="submit" (click)="seleccionoMonto(monto.value)">Ingresar</button>
+                            <div><input type="button" class="btn btn-danger" value="volver" (click)="seleccionoFP = false"></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
         </div>
+
+        <div id="contenedorcito2">
+             
+                <input type="button" id="volver" class="btn btn-danger" (click)="atras()" value="Volver a la agenda">
+            
+        </div>
+
     </div>
 </div>

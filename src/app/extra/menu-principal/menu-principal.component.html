@@ -5,7 +5,7 @@
                 Registrar Turno
             </div>
             <div class="cuerpo" id="cuerpo1">
-                Realizar el registro del turno al paciente en el sistema
+                Realizar el registro del turno a un paciente
             </div>
         </div>
 
@@ -18,12 +18,12 @@
             </div>
         </div>
 
-        <div class="opcion" id="opcion3">
+        <div class="opcion" id="opcion3" [routerLink]="['/registrarHM']">
             <div class="cabecera" id="cabecera3">
-                Opcion 3
+                Registrar Historial Medico
             </div>
             <div class="cuerpo" id="cuerpo3">
-                Descripcion de la opcion 3...
+                Realizar el registro del historial medico de un paciente
             </div>
         </div>
 
@@ -32,7 +32,7 @@
                 Registrar Paciente
             </div>
             <div class="cuerpo" id="cuerpo4">
-                Realizar el registro del paciente en el sistema
+                Realizar el registro de un paciente
             </div>
         </div>
 
@@ -41,7 +41,7 @@
                 Registrar Especialista
             </div>
             <div class="cuerpo" id="cuerpo5">
-                Realizar el registro del especialista en el sistema
+                Realizar el registro de un especialista
             </div>
         </div>
 
@@ -50,8 +50,55 @@
                 Registrar Especialidad
             </div>
             <div class="cuerpo" id="cuerpo6">
-                Realizar el registro de la especialidad en el sistema
+                Realizar el registro de una especialidad
             </div>
         </div>
+
+        <div class="opcion" id="opcion7" [routerLink]="['/cobro']">
+            <div class="cabecera" id="cabecera7">
+                Consultar cobro
+            </div>
+            <div class="cuerpo" id="cuerpo7">
+                Consultar los cobros realizados
+            </div>
+        </div>
+
+        <div class="opcion" id="opcion8" [routerLink]="['/consultarHM']">
+            <div class="cabecera" id="cabecera8">
+                Consultar Historial medico
+            </div>
+            <div class="cuerpo" id="cuerpo8">
+                Consultar los Historiales medicos realizados con anterioridad
+            </div>
+        </div>
+
+        <div class="opcion" id="opcion9" [routerLink]="['/estadistica']">
+            <div class="cabecera" id="cabecera9">
+                Consultar Estadistica
+            </div>
+            <div class="cuerpo" id="cuerpo9">
+                Consultar las estadisticas en formato grafico
+            </div>
+        </div>
+
+        <div class="opcion" id="opcion10" [routerLink]="['/consultarEspecialidades']">
+            <div class="cabecera" id="cabecera10">
+                Consultar Especialidades
+            </div>
+            <div class="cuerpo" id="cuerpo10">
+                Consultar las especialidades registradas en el sistema
+            </div>
+        </div>
+
+        <div class="opcion" id="opcion11" [routerLink]="['/consultarEspecialistas']">
+            <div class="cabecera" id="cabecera11">
+                Consultar Especialistas
+            </div>
+            <div class="cuerpo" id="cuerpo11">
+                Consultar los especialistas registrados en el sistema
+            </div>
+        </div>
+
+
     </div>
 </div>

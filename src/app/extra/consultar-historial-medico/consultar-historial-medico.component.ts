@@ -22,7 +22,8 @@ export class ConsultarHistorialMedicoComponent implements OnInit{
     private servicePaciente: ClientesService,
     private serviceHM: HistorialMedicoService,
     private toastr: ToastrService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private router:Router
   ){}
 
   ngOnInit(): void {
@@ -54,6 +55,10 @@ export class ConsultarHistorialMedicoComponent implements OnInit{
 
       
     });
+  }
+
+  volver(){
+    this.router.navigate(["/menuPrincipal"])
   }
 
 }

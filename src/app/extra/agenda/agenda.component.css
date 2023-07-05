@@ -1,7 +1,24 @@
-#pie input{
-  width: 25%;
+
+
+#fondo{
+    background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pie{
+  background-color: red;
 }
 
+#pie input{
+  width: 100%;
+}
+
+#contenedorcito2{
+  width: 15vh;
+  position: relative;
+  top: -35vh;
+  
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -41,14 +58,13 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(223, 226, 220);
 }
 
 #contenedor1{
-  background-color: rgb(114, 161, 145);
-  width: 60%;
-  max-width: 60%;
-  height: 80%;
+  
+  width: 80%;
+  max-width: 70%;
+  height: 70%;
   padding: 30px;
   box-sizing: content-box;
   border:solid black;
@@ -56,7 +72,7 @@ input::-webkit-inner-spin-button {
   grid-template-rows: repeat(3, auto);
   background-color: azure;  
   flex-wrap: wrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 
@@ -84,6 +100,7 @@ input::-webkit-inner-spin-button {
 }
 
 #divGrid1{
+  
   display: grid;
   grid-template-rows: repeat(2, auto);
 }
@@ -105,12 +122,13 @@ input::-webkit-inner-spin-button {
 
 }  
 .diaSemana1{
-  background-color: aqua;
+  background-color: rgb(179, 245, 245);
   border: black solid;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 
 #grid{
@@ -152,7 +170,10 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(223, 226, 220);
+  background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 #contenedor2{
@@ -162,7 +183,7 @@ input::-webkit-inner-spin-button {
   padding: 30px;
   box-sizing: content-box;
   border:solid black;
-  background-color: azure;  
+  background-color: rgb(255, 255, 255);
   overflow-x: scroll;
 }
 
@@ -174,13 +195,15 @@ input::-webkit-inner-spin-button {
 }
 
 #tarjeta_grilla{
-  background-color: bisque;
+  background-color: rgb(224, 232, 78);
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 20px;
   padding: 10px;
   width: fit-content;
   height: fit-content;
   border: solid black;
-  cursor: pointer;
 
 }
 
@@ -194,6 +217,7 @@ input::-webkit-inner-spin-button {
 }
 
 #div_padding1{
+  display: flex;
   padding: 5vh;
   gap: 3vh;
 }
@@ -216,4 +240,115 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   align-items: center;
   padding: 5vh;
+}
+
+
+
+
+#contenedor1{
+  background-color: rgb(251, 233, 233);
+}
+.tituloAgenda1{
+  background-color: rgb(247, 123, 93);
+}
+
+.agenda1{
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+.diaSemana1{
+  font-weight: bold;
+}
+
+.turno{
+  background-color: rgb(255, 246, 234);
+}
+
+
+
+#celdaTurno{
+  background-color: rgb(89, 132, 177);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#volver{
+  background-color: rgb(250, 34, 34);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  
+}
+
+#volverTurnos{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.monto{
+  cursor: pointer;
+}
+
+#cabeceraDeTurno{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+#cabeceraDeTurno span{
+  cursor: pointer;
+}
+
+#mensajeBorrar{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80%;
+  position: absolute;
+}
+
+#botBorrar{
+  display: flex;
+  gap: 20px;
+}
+
+#divSelector1{
+  border: solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 2px;
+}
+
+#divSelector1 i{
+  cursor: pointer;
+}
+
+.horarioNro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 123, 93);
+  border: solid black;
+}
+
+.nroSemana{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }

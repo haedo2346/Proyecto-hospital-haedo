@@ -21,7 +21,9 @@
                 <h5>Ingresar Turno</h5>
             </div>
             <div class="espacioTarjeta" id="selectEspacioTarjeta3" *ngIf="seleccionoTarj3">
-                <h5>{{tarjetaHoraTurno.diaSemana}}</h5> {{tarjetaHora}}
+                <h5>{{tarjetaHoraTurno.diaSemana}}</h5>
+                <h5>{{fechaTurno}}</h5>
+                 {{tarjetaHora}}
             </div>
         </div>
         
@@ -29,10 +31,13 @@
 
         <!-- CUERPO INFERIOR -->
         <div id="cuerpoInferior">
-
-
-
-            <!-- Paciente -->
+            <div id="cabezaAbajo" *ngIf="seleccionoTarj1 && seleccionoTarj2">
+                <i (click)="anteriorSemana()" class="flechas fa-solid fa-angles-left"></i>
+                    Semana: {{estaSemana}} | dia: {{esteDia}} | mes: {{esteNroMes}}  | nro de semana: {{esteNroSemana}}
+                <i (click)="siguienteSemana()" class="flechas fa-solid fa-angles-right"></i>
+            </div>
+            <div id="cuerpoAbajo">
+<!-- Paciente -->
             <div id="paciente" *ngIf="seleccionoTarj1 == false">
                 <div (click)="selectTarjeta1(tarjeta)" class="tarjeta" *ngFor="let tarjeta of tarjetasPacientes" >
                     <div class="cabeceraTarjeta"><p>{{tarjeta.nombre}} {{tarjeta.apellido}}</p></div>
@@ -50,9 +55,11 @@
 
             <!-- Hora Turno -->
             <div id="horaTurno" *ngIf="seleccionoTarj3 == false && seleccionoTarj2">
-                <div (click)="selectTarjeta3(tarjeta)" class="tarjeta" *ngFor="let tarjeta of disponibilidadOrdenadaEspecialista; index as i" >
+                <div (click)="selectTarjeta3(tarjeta)" class="tarjeta" *ngFor="let tarjeta of mostrar; index as i" >
                     <div class="cabeceraTarjeta">
-                        <h5>{{tarjeta.diaSemana}}</h5> <p>{{tarjeta.horario[0]}} : {{tarjeta.horario[1]}}</p></div>
+                        <h5>{{mostrar[i].dia}}/{{mostrar[i].mes}}</h5>
+                        <h5>{{tarjeta.diaSemana}}</h5>
+                        <p>{{tarjeta.horario[0]}} : {{tarjeta.horario[1]}}</p></div>
                     <div class="cuerpoTarjeta"></div>
                 </div>
             </div>
@@ -61,8 +68,10 @@
             <div id="registrarTurno" *ngIf="seleccionoTarj3 == true">
                 <h5>¿Estas seguro de registrar el turno?</h5>
                 <input (click)="registrar()" id="aceptarRegistrar" type="button" value="Si" class="btn btn-primary">
-                <input (click)="volver()" id="volverRegistrar" type="button" value="No" class="btn btn-danger">    
+                <input (click)="atras()" id="volverRegistrar" type="button" value="No" class="btn btn-danger">    
             </div>
+            </div>
+            
 
         </div>
 

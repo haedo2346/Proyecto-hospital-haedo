@@ -1,0 +1,48 @@
+<div id="pagina">
+    <div id="contenedor">
+        <div id="cabecera">
+            <h2>Consultar Especialistas</h2>
+        </div> 
+
+        <div>
+            <div class="table-responsive">
+                <table id="tabla"
+                class="table table-striped
+                table-hover	
+                table-borderless
+                table-primary
+                align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Legajo</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Telefono</th>
+                            <th>Documento</th>
+                            <th>Horario Inicio</th>
+                            <th>Horario Fin</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-group-divider"  *ngFor="let item of tarjetasEspecialistas">
+                            <tr class="table-primary">
+                                <td>{{item.nroLegajo}}</td>
+                                <td>{{item.nombre}}</td>
+                                <td>{{item.apellido}}</td>
+                                <td>{{item.nroTel}}</td>
+                                <td>{{item.nroDoc}}</td>
+                                <td>{{item.dispHoraria[0]}}</td>
+                                <td>{{item.dispHoraria[1]}}</td>
+                            </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+    
+    
+    <div id="contenedorcito2">
+        <input type="button" id="volver" class="btn btn-danger" (click)="volver()" value="Volver a menu principal">
+    </div>  
+     
+</div>

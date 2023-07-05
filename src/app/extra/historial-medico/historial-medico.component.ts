@@ -27,7 +27,8 @@ export class HistorialMedicoComponent implements OnInit{
     private serviceEspecialista: EspecialistasService,
     private serviceHM: HistorialMedicoService,
     private toastr: ToastrService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private router:Router
   ){}
 
   ngOnInit(): void {
@@ -204,6 +205,15 @@ export class HistorialMedicoComponent implements OnInit{
     }) 
     
 
+  }
+
+  volver(){
+    this.seleccionoEspecialista = false;
+    this.seleccionoPaciente = false;
+  }
+
+  atras(){
+    this.router.navigate(["/menuPrincipal"])
   }
 
 }

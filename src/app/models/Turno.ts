@@ -3,6 +3,8 @@ import { IPaciente } from "./Paciente";
 
 export interface ITurno{
     _id: string,
+    fechaTurno: string,
+    
     diaSemana: string,
     especialista: IEspecialista,
     horario: string[],

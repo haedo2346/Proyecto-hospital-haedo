@@ -28,6 +28,9 @@ export class CobroComponent implements OnInit{
 
   tarjetasCobro;
 
+  volver(){
+    this.router.navigate(["/menuPrincipal"])
+  }
 
 
 }

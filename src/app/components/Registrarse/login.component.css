@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://i.pinimg.com/736x/27/47/21/2747218a5aa2be2e306cf1ecfc25674d--pretty-patterns-art-patterns.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 #contenedor{

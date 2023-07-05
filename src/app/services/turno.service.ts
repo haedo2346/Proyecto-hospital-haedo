@@ -20,4 +20,9 @@ export class TurnoService {
     return collectionData(turnoDocRef, {idField: "_id"}) as Observable<ITurno[]>
   }
 
+  borrarTurno(turno:ITurno){
+    const turnoDocRef = doc(this.firestore, `turnos/${turno._id}`);
+    return deleteDoc(turnoDocRef);
+  }
+
 }

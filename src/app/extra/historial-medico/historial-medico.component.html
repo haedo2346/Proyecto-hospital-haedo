@@ -119,7 +119,7 @@
 
             <div id="pie">
                 <input type="submit" class="form-control btn btn-success" id="aceptar" value="Registrar">
-                <input type="button" class="form-control btn btn-danger" id="volver" value="Volver">
+                <input type="button" class="form-control btn btn-danger" id="volver" value="Volver" (click)="volver()">
               </div>
               
         </form>
@@ -127,6 +127,7 @@
         
         
     </div>
+    
 </div>
 
 
@@ -146,6 +147,10 @@
         </div>
         
         
+        
+    </div>
+    <div id="contenedorcito2">
+        <input type="button" id="volver" class="btn btn-danger" (click)="atras()" value="Volver a menu principal">
     </div>
 </div>
 
@@ -166,4 +171,7 @@
         
         
     </div>
+    <div id="contenedorcito2">
+        <input type="button" id="volver" class="btn btn-danger" (click)="volver()" value="Volver a menu principal">
+    </div>  
 </div>

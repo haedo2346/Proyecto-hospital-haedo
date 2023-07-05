@@ -1,7 +1,7 @@
 <div id="pagina">
     <div id="contenedor">
         <div id="cabecera">
-            <h2>Consultar cobro</h2>
+            <h2>Consultar Especialidades</h2>
         </div> 
 
         <div>
@@ -14,20 +14,14 @@
                 align-middle">
                     <thead class="table-light">
                         <tr>
-                            <th>Fecha de Pago</th>
-                            <th>Especialidad</th>
-                            <th>Paciente</th>
-                            <th>Forma de pago</th>
-                            <th>Monto</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
                         </tr>
                         </thead>
-                        <tbody class="table-group-divider"  *ngFor="let item of tarjetasCobro">
+                        <tbody class="table-group-divider"  *ngFor="let item of tarjetasEspecialidades">
                             <tr class="table-primary">
-                                <td>{{item.fecha}}</td>
-                                <td>{{item.especialidad}}</td>
-                                <td>{{item.paciente}}</td>
-                                <td>{{item.formaPago}}</td>
-                                <td>{{item.monto}}</td>
+                                <td>{{item.nombre}}</td>
+                                <td>{{item.descripcion}}</td>
                             </tr>
                 </table>
             </div>

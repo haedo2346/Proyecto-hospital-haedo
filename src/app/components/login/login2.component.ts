@@ -39,8 +39,7 @@ export class Login2Component implements OnInit{
     const error = document.getElementsByClassName("is-invalid");
     
     if (error.length > 0 ||
-      fRV.controls.email.untouched ||
-      fRV.controls.password.untouched) {
+      fRV.controls.email.untouched) {
     alert("Por favor, ingrese los datos...")
     return
   }
