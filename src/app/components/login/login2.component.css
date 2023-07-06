@@ -1,101 +1,96 @@
-#fondo{
-    height: 100vh;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpapers.com/images/featured/mhdoyguhq3skloxt.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+#fondo {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpapers.com/images/featured/mhdoyguhq3skloxt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#contenedor{
-    background-color: rgb(72, 108, 215);
-    width: 70vh;
-    height: auto;
-    border-radius: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    padding: 15px;
-    box-shadow: 0 5px 15px 3px black;
+#contenedor {
+  background-color: rgb(72, 108, 215);
+  width: 70vh;
+  height: auto;
+  border-radius: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 15px;
+  box-shadow: 0 5px 15px 3px black;
 }
 input {
-    outline: 0;
-    border: 0;
+  outline: 0;
+  border: 0;
 }
-#formulario-nombre{
-    background-color: rgb(101, 130, 215);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    
+#formulario-nombre {
+  background-color: rgb(101, 130, 215);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-#formulario-contraseña{
-    background-color: rgb(101, 130, 215);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    
+#formulario-contraseña {
+  background-color: rgb(101, 130, 215);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
-#formulario-ingresar{
-    background-color: rgb(101, 130, 215);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-    
-#btn-ingresar{
-    padding: 10px;
-    font-family: sans-serif;
+#formulario-ingresar {
+  background-color: rgb(101, 130, 215);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-
-.icons{
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    gap: 4vh;
-    font-size: 30px;
+#btn-ingresar {
+  padding: 10px;
+  font-family: sans-serif;
 }
 
-#infoAdicional{
-    display:flex;
-    flex-direction: column;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    
+.icons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 4vh;
+  font-size: 30px;
 }
 
-.fa-brands:hover{
-    color: aquamarine;
-    cursor: pointer;
-}
-.fa-solid:hover{
-    color: aquamarine;
-    cursor: pointer;
-}
-
-#infoAdicional2{
-    display:flex;
-    flex-direction: column;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    
+#infoAdicional {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
 }
 
-#infoAdicional2:visited{
-    text-decoration: none;
+.fa-brands:hover {
+  color: aquamarine;
+  cursor: pointer;
 }
-#infoAdicional2:link{
-    text-decoration: none;
+.fa-solid:hover {
+  color: aquamarine;
+  cursor: pointer;
 }
-#infoAdicional2:hover{
-    text-decoration: none;
-    color: aquamarine;
-    cursor: pointer;
+
+#infoAdicional2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
 }
-#infoAdicional2:active{
-    text-decoration: none;
+
+#infoAdicional2:visited {
+  text-decoration: none;
+}
+#infoAdicional2:link {
+  text-decoration: none;
+}
+#infoAdicional2:hover {
+  text-decoration: none;
+  color: aquamarine;
+  cursor: pointer;
+}
+#infoAdicional2:active {
+  text-decoration: none;
 }
