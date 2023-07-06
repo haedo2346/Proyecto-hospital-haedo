@@ -1,79 +1,79 @@
-#pagina{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpaperaccess.com/full/881494.png);
+#pagina {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpaperaccess.com/full/881494.png);
 }
 
-#contenedor{
-    background-color: rgb(182, 228, 213);
-    width: 60%;
-    height: 80%;
-    display: grid;
-    padding: 30px;
-    box-sizing: content-box;
-    justify-content: center;
-    border:solid black;
-    grid-template-columns: 33% 34% 33%;
-    row-gap: 10vh;
-    column-gap: 10px;
-    grid-template-rows: 25% 25% 25% 25%;
-    background-color: azure;
-    overflow-y: scroll;
-    overflow-x:hidden;
+#contenedor {
+  background-color: rgb(182, 228, 213);
+  width: 60%;
+  height: 80%;
+  display: grid;
+  padding: 30px;
+  box-sizing: content-box;
+  justify-content: center;
+  border: solid black;
+  grid-template-columns: 33% 34% 33%;
+  row-gap: 10vh;
+  column-gap: 10px;
+  grid-template-rows: 25% 25% 25% 25%;
+  background-color: azure;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.opcion{
-    box-sizing:border-box;
-    user-select: none;
-    cursor: pointer;   
+.opcion {
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
 }
 .cuerpo:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-.cabecera{
-    background-color:rgb(182, 228, 213);
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+.cabecera {
+  background-color: rgb(182, 228, 213);
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
-.cuerpo{
-    background-image: url(https://cdn.wallpapersafari.com/17/36/a9uwyD.jpg);
-    color: white;
-    background-size: cover;
-    height: 100%;
-    padding: 10px;
-    text-align: center;
+.cuerpo {
+  background-image: url(https://cdn.wallpapersafari.com/17/36/a9uwyD.jpg);
+  color: white;
+  background-size: cover;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(216, 113, 113); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  }
+  width: 20px;
+}
 
-  input::-webkit-outer-spin-button,
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(122, 0, 0);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(180, 21, 21);
+}
+
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;

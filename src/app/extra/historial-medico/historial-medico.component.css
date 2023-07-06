@@ -1,251 +1,231 @@
-#pagina{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpaperaccess.com/full/1758836.jpg);
+#pagina {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpaperaccess.com/full/1758836.jpg);
 }
 
-#contenedor{
-    background-color: rgb(182, 228, 213);;
-    width: 60%;
-    height: 80%;
-    padding: 30px;
-    box-sizing: content-box;
-    border:solid black;
-    display: flex;
-    flex-direction: column;
-    background-color: azure; 
-    overflow: scroll; 
-
+#contenedor {
+  background-color: rgb(182, 228, 213);
+  width: 60%;
+  height: 80%;
+  padding: 30px;
+  box-sizing: content-box;
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  overflow: scroll;
 }
 
-#cabecera{
-    background-color: aquamarine;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#cabecera {
+  background-color: aquamarine;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#hc1{
-    display: flex;
-    gap: 1vh;
-    margin: 3vh;
+#hc1 {
+  display: flex;
+  gap: 1vh;
+  margin: 3vh;
 }
 
-#hc2-div1{
-    display: flex;
+#hc2-div1 {
+  display: flex;
 }
 
-#hc2-div2{
-    display: flex;
+#hc2-div2 {
+  display: flex;
 }
 
-#hc2-div3{
-    display: flex;
+#hc2-div3 {
+  display: flex;
 }
 
-
-#hc2-div1-div1{
-    width: 60%;
+#hc2-div1-div1 {
+  width: 60%;
 }
-#hc2-div1-div2{
-    width: 20%;
+#hc2-div1-div2 {
+  width: 20%;
 }
-#hc2-div1-div3{
-    width: 20%;
-}
-
-#hc2-div2-div1{
-    width: 50%;
-}
-#hc2-div2-div2{
-    width: 50%;
+#hc2-div1-div3 {
+  width: 20%;
 }
 
-#h2c-div3-div1{
-    width: 40%;
+#hc2-div2-div1 {
+  width: 50%;
 }
-#h2c-div3-div2{
-    width: 40%;
-}
-#h2c-div3-div3{
-    width: 20%;
+#hc2-div2-div2 {
+  width: 50%;
 }
 
-
-
-
-
-#hc3-div1{
-    display: flex;
+#h2c-div3-div1 {
+  width: 40%;
+}
+#h2c-div3-div2 {
+  width: 40%;
+}
+#h2c-div3-div3 {
+  width: 20%;
 }
 
-#hc5-div1{
-    display: flex;
+#hc3-div1 {
+  display: flex;
 }
 
-h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
+#hc5-div1 {
+  display: flex;
 }
 
-#pie{
-    display: flex;
-    justify-content:space-between;
-    margin-top: 5vh;
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
 }
 
-
-
-#aceptar
-{
-    width: 40vh;
-    height: 8vh;
+#pie {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
 }
 
-#volver
-{
-    width: 40vh;
-    height: 8vh;
+#aceptar {
+  width: 40vh;
+  height: 8vh;
 }
 
-
-
-#grid1{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+#volver {
+  width: 40vh;
+  height: 8vh;
 }
 
-#grid2{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+#grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 }
 
+#grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
 
 /* ----------------- */
-#pagina1{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
+#pagina1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
 }
 
-#contenedor1{
-    background-color: aquamarine;
-    width: 60%;
-    height: 80%;
-    padding: 30px;
-    box-sizing: content-box;
-    border:solid black;
-    display: flex;
-    flex-direction: column;
-    background-color: azure; 
-    overflow: scroll; 
-
+#contenedor1 {
+  background-color: aquamarine;
+  width: 60%;
+  height: 80%;
+  padding: 30px;
+  box-sizing: content-box;
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  overflow: scroll;
 }
 
-#tarjetaPaciente{
-    cursor: pointer;
-    box-sizing: content-box;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    background-color: rgb(238, 219, 255);
-    border: solid black;
-    width: 20vh;
-    height: 33vh;
+#tarjetaPaciente {
+  cursor: pointer;
+  box-sizing: content-box;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgb(238, 219, 255);
+  border: solid black;
+  width: 20vh;
+  height: 33vh;
 }
-
-
 
 /* ----------------- */
-#pagina2{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
+#pagina2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://cdn.wallpapersafari.com/76/57/9wALC6.jpg);
 }
 
-#contenedor2{
-    background-color: aquamarine;
-    width: 60%;
-    height: 80%;
-    padding: 30px;
-    box-sizing: content-box;
-    border:solid black;
-    display: flex;
-    flex-direction: column;
-    background-color: azure; 
-    overflow: scroll; 
-
+#contenedor2 {
+  background-color: aquamarine;
+  width: 60%;
+  height: 80%;
+  padding: 30px;
+  box-sizing: content-box;
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  overflow: scroll;
 }
 
-#tarjetaEspecialista{
-    cursor: pointer;
-    box-sizing: content-box;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    background-color: rgb(238, 219, 255);
-    border: solid black;
-    width: 20vh;
-    height: 33vh;
+#tarjetaEspecialista {
+  cursor: pointer;
+  box-sizing: content-box;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgb(238, 219, 255);
+  border: solid black;
+  width: 20vh;
+  height: 33vh;
 }
-
-
 
 /* ----------------- */
-
-
-
-
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(216, 113, 113); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  }
+  width: 20px;
+}
 
-  input::-webkit-outer-spin-button,
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(216, 113, 113);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#contenedorcito2{
-    width: 15vh;
-    position: relative;
-    top: -40vh;
-    
-  }
+#contenedorcito2 {
+  width: 15vh;
+  position: relative;
+  top: -40vh;
+}
+
+.form-control {
+  border-bottom: 1px solid black;
+}
